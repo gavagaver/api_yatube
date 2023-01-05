@@ -1,11 +1,21 @@
 from django.shortcuts import get_object_or_404
-from rest_framework import viewsets, permissions
+from rest_framework import viewsets, permissions, mixins
 from .permissions import IsAuthorOrReadOnly
 from rest_framework.pagination import PageNumberPagination
 
-from posts.models import Group, Post
+from posts.models import User, Group, Post, Follow
 
 from . import serializers
+
+
+class ListCreateViewSet(mixins.ListModelMixin, mixins.CreateModelMixin,
+                        viewsets.GenericViewSet):
+    pass
+
+
+class UserViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = serializers.UserSerializer
 
 
 class GroupViewSet(viewsets.ReadOnlyModelViewSet):
@@ -46,3 +56,13 @@ class CommentViewSet(viewsets.ModelViewSet):
 
     def perform_update(self, serializer):
         serializer.save(author=self.request.user)
+
+
+class FollowViewSet(ListCreateViewSet):
+    queryset = Follow.objects.all()
+    serializer_class = serializers.FollowSerializer
+
+    pagination_class = None
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
