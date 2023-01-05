@@ -1,11 +1,11 @@
 from django.shortcuts import get_object_or_404
-from rest_framework import viewsets, permissions, mixins
-from .permissions import IsAuthorOrReadOnly
-from rest_framework.pagination import PageNumberPagination
-
 from posts.models import User, Group, Post, Follow
+from rest_framework import viewsets, mixins
+from rest_framework.pagination import PageNumberPagination
+from rest_framework import filters
 
 from . import serializers
+from .permissions import IsAuthorOrReadOnly
 
 
 class ListCreateViewSet(mixins.ListModelMixin, mixins.CreateModelMixin,
@@ -63,6 +63,8 @@ class FollowViewSet(ListCreateViewSet):
     serializer_class = serializers.FollowSerializer
 
     pagination_class = None
+    filter_backends = (filters.SearchFilter,)
+    search_fields = ('following__username',)
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
