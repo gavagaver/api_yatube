@@ -60,4 +60,3 @@ class FollowSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(
                 'Нельзя подписаться на себя. Укажите другого пользователя')
         return data
-
