@@ -1,5 +1,5 @@
 # Проект «API для Yatube»
-
+[![CI](https://github.com/gavagaver/api_yatube/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/gavagaver/api_yatube/actions/workflows/tests.yml)
 «API для Yatube» позволяет пользователям социальной сети Yatube публиковать свои посты и управлять подписками через программный интерфейс взаимодействия.
 
 ## Функции:
