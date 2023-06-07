@@ -1,9 +1,9 @@
-# Проект «API для Yatube»
+# REST API для Yatube
 [![CI](https://github.com/gavagaver/api_yatube/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/gavagaver/api_yatube/actions/workflows/tests.yml)
 
-«API для Yatube» позволяет пользователям социальной сети Yatube публиковать свои посты и управлять подписками через программный интерфейс взаимодействия.
+«API для Yatube» позволяет пользователям социальной сети [Yatube](https://github.com/gavagaver/yatube)  публиковать свои посты и управлять подписками через программный интерфейс взаимодействия.
 
-## Функции:
+## Возможности:
 
 - Получение, создание, обновление, удаление публикаций.
 - Получение, создание, обновление, удаление комментариев к публикациям.
@@ -11,13 +11,13 @@
 - Отслеживание подписок на авторов, а так же возможность подписки на интересующего автора.
 - Получение, обновление и проверка JWT авторизации.
 
-## Как запустить проект:
+## Установка и запуск:
 
 Клонировать репозиторий и перейти в него в командной строке:
 
-`git clone https://github.com/gavagaver/api_final_yatube.git`
+`git clone https://github.com/gavagaver/api_yatube.git`
 
-`cd api_final_yatube`
+`cd api_yatube`
 
 
 Создать и активировать виртуальное окружение:
@@ -79,3 +79,17 @@
     "group": 1
 }
 ```
+
+## Стек
+- Python 3
+- Django 2.2
+- Django REST Framework
+- SQLite3
+- Simple-JWT
+
+## Об авторе
+Голишевский Андрей Вячеславович
+Python-разработчик (Backend)
+E-mail: gav@gaver.ru
+Telegram: @gavagaver
+Россия, г. Москва
