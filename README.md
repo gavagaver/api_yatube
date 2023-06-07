@@ -88,8 +88,8 @@
 - Simple-JWT
 
 ## Об авторе
-Голишевский Андрей Вячеславович
-Python-разработчик (Backend)
-E-mail: gav@gaver.ru
-Telegram: @gavagaver
-Россия, г. Москва
+Голишевский Андрей Вячеславович  
+Python-разработчик (Backend)  
+E-mail: gav@gaver.ru  
+Telegram: @gavagaver  
+Россия, г. Москва  
