@@ -92,7 +92,9 @@ python3 manage.py runserver
 ```
 
 После запуска проекта, документация будет доступна по адресу:
-`http://localhost:port/redoc/`
+```
+http://localhost:port/redoc/
+```
 
 ## Примеры запросов:
 
