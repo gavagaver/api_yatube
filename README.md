@@ -12,29 +12,84 @@
 - Получение, обновление и проверка JWT авторизации.
 
 ## Установка и запуск:
+1. [ ] Клонировать репозиторий и перейти в него в командной строке:
 
-Клонировать репозиторий и перейти в него в командной строке:
+```bash
+git clone https://github.com/gavagaver/api_yatube.git && cd api_yatube
+```
 
-`git clone https://github.com/gavagaver/api_yatube.git`
+1. [ ] Создать и активировать виртуальное окружение:
 
-`cd api_yatube`
+###### Windows:
+```bash
+python -m venv venv
+```
+```bash
+source venv/Scripts/activate
+```
+```bash
+python -m pip install --upgrade pip
+```
+###### Linux:
+```bash
+python3 -m venv venv
+```
+```bash
+source venv/bin/activate
+```
+```bash
+python3 -m pip install --upgrade pip
+```
 
+1. [ ] Установить зависимости
+```bash
+pip install -r requirements.txt
+``` 
+1. [ ] Перейти в папку с manage.py
 
-Создать и активировать виртуальное окружение:
+```bash
+cd api_yatube
+``` 
 
-+ `python -m venv venv`
-+ `source venv/Scripts/activate`
-+ `python -m pip install --upgrade pip`
+1. [ ] Создать миграции
+###### Windows:
+```bash
+python manage.py makemigrations
+```
+###### Linux:
+```bash
+python3 manage.py makemigrations
+```
 
-Установить зависимости из файла requirements.txt:
-`pip install -r requirements.txt`
+1. [ ] Применить миграции
+###### Windows:
+```bash
+python manage.py migrate
+```
+###### Linux:
+```bash
+python3 manage.py migrate
+```
 
-Выполнить миграции:
-`python manage.py migrate`
+1. [ ] Создать супер-пользователя
+###### Windows:
+```bash
+python manage.py createsuperuser
+```
+###### Linux:
+```bash
+python3 manage.py createsuperuser
+```
 
-
-Запустить проект:
-`python manage.py runserver`
+1. [ ] Запустить проект
+###### Windows:
+```bash
+python manage.py runserver
+```
+###### Linux:
+```bash
+python3 manage.py runserver
+```
 
 После запуска проекта, документация будет доступна по адресу:
 `http://localhost:port/redoc/`
